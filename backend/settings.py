@@ -25,7 +25,12 @@ SECRET_KEY = "django-insecure-p^k8ko&zka!lgzy31sjo0w2i*^$+$y!&t#ig9fz%_thy0zuss)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '10.0.2.207',
+    'frontend-bucket-naeim-salib.s3-website-us-east-1.amazonaws.com',
+]
 
 
 # Application definition
