@@ -3,7 +3,6 @@ from .models import Todo
 from .serializers import TodoSerializer
 from django.http import JsonResponse
 
-
 class TodoListCreate(generics.ListCreateAPIView):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
