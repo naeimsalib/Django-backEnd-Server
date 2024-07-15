@@ -6,5 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('todo.urls')),
     path('', health_check, name='health_check'),
-
+    path('api/todos/', views.todos, name='todos'),
 ]
