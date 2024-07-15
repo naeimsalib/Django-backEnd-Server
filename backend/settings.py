@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '10.0.2.207',
+    '100.27.201.107',
     'frontend-bucket-naeim-salib.s3-website-us-east-1.amazonaws.com',
     'front-end-lb-1151896008.us-east-1.elb.amazonaws.com',
 ]
@@ -46,19 +47,18 @@ INSTALLED_APPS = [
     'rest_framework',
     'todo',
     'corsheaders',
-
 ]
 
 MIDDLEWARE = [
-    "django.middleware.security.SecurityMiddleware",
-    "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    'rest_framework',
+    'todo',
+    'corsheaders',
 ]
 
 ROOT_URLCONF = "backend.urls"
