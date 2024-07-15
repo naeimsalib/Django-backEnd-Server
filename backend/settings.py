@@ -25,14 +25,7 @@ SECRET_KEY = "django-insecure-p^k8ko&zka!lgzy31sjo0w2i*^$+$y!&t#ig9fz%_thy0zuss)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    '10.0.2.207',
-    '100.27.201.107',
-    'frontend-bucket-naeim-salib.s3-website-us-east-1.amazonaws.com',
-    'front-end-lb-1151896008.us-east-1.elb.amazonaws.com',
-]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -47,19 +40,20 @@ INSTALLED_APPS = [
     'rest_framework',
     'todo',
     'corsheaders',
+
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  # Add this at the top
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 
 ROOT_URLCONF = "backend.urls"
 
@@ -112,19 +106,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://frontend-bucket-naeim-salib.s3-website-us-east-1.amazonaws.com",
     'http://localhost:3000',
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES': (
-        'rest_framework.renderers.JSONRenderer',
-    ),
-    'DEFAULT_PARSER_CLASSES': (
-        'rest_framework.parsers.JSONParser',
-    ),
-    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
-}
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
