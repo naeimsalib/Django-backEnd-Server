@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '10.0.2.207',
     'frontend-bucket-naeim-salib.s3-website-us-east-1.amazonaws.com',
+    'front-end-lb-1151896008.us-east-1.elb.amazonaws.com',
 ]
 
 
