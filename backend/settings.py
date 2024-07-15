@@ -59,6 +59,7 @@ MIDDLEWARE = [
     'rest_framework',
     'todo',
     'corsheaders',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = "backend.urls"
@@ -112,8 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://frontend-bucket-naeim-salib.s3.amazonaws.com",
-    "https://your-backend-domain-or-alb-dns-name",
+    "http://frontend-bucket-naeim-salib.s3-website-us-east-1.amazonaws.com",
 ]
 
 
