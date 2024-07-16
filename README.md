@@ -1,4 +1,6 @@
+
 ## Backend (Django)
+This project is part of a full-stack application that consists of a React frontend and a Django backend. The application allows users to manage a to-do list, with the ability to add, delete, and persist to-do items across sessions.
 
 The Django backend provides a RESTful API to manage the to-do items. It includes models, serializers, views, and URL configurations to handle the necessary operations.
 
