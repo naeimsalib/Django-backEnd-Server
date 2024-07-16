@@ -31,6 +31,7 @@ ALLOWED_HOSTS = [
     'https://d22lkkwb7ax8hu.cloudfront.net',
     'front-end-lb-1151896008.us-east-1.elb.amazonaws.com',
     'http://frontend-bucket-naeim-salib.s3-website-us-east-1.amazonaws.com ',
+    '10.0.2.207',
 ]
 
 # Application definition
