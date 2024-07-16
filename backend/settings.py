@@ -28,11 +28,12 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'https://d22lkkwb7ax8hu.cloudfront.net',
+    'd22lkkwb7ax8hu.cloudfront.net',
     'front-end-lb-1151896008.us-east-1.elb.amazonaws.com',
-    'http://frontend-bucket-naeim-salib.s3-website-us-east-1.amazonaws.com ',
+    'frontend-bucket-naeim-salib.s3-website-us-east-1.amazonaws.com',
     '10.0.2.207',
-]
+    '54.83.55.11',  
+    ]
 
 # Application definition
 
@@ -113,8 +114,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://front-end-lb-1151896008.us-east-1.elb.amazonaws.com',
-    'http://http://frontend-bucket-naeim-salib.s3-website-us-east-1.amazonaws.com '
-]
+    'http://frontend-bucket-naeim-salib.s3-website-us-east-1.amazonaws.com',
+    'http://d22lkkwb7ax8hu.cloudfront.net',
+    'http://localhost:3000',
+    ]
 
 
 # Internationalization
@@ -160,3 +163,4 @@ CORS_ALLOW_METHODS = [
     'OPTIONS',
 ]
 CORS_ALLOW_CREDENTIALS = True
+
