@@ -28,10 +28,9 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    '10.0.2.207',
-    'Front-end-LB-1151896008.us-east-1.elb.amazonaws.com',
+    'front-end-lb-1151896008.us-east-1.elb.amazonaws.com',
+    'http://frontend-bucket-naeim-salib.s3-website-us-east-1.amazonaws.com ',
 ]
-
 
 # Application definition
 
@@ -111,7 +110,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
+    'http://front-end-lb-1151896008.us-east-1.elb.amazonaws.com',
+    'http://http://frontend-bucket-naeim-salib.s3-website-us-east-1.amazonaws.com '
 ]
 
 
@@ -136,3 +136,25 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+# Or, if you want to restrict to specific origins
+# CORS_ORIGIN_WHITELIST = [
+#     'http://localhost:3000',
+#     'http://your-frontend-domain.com',
+# ]
+
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'Authorization',
+]
+
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'DELETE',
+    'OPTIONS',
+]
+CORS_ALLOW_CREDENTIALS = True
